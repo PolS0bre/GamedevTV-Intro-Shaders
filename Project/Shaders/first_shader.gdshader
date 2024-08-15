@@ -1,26 +1,24 @@
 shader_type canvas_item;
 
+int my_function(){
+	return 10;
+}
+
+int substract_ints(int intA, int intB){
+	int result = intA - intB;
+	return result;
+}
+
+float add_floats(float floatA, float floatB){
+	float result = floatA + floatB;
+	return result;
+}
+
 void vertex() {
 	// Called for every vertex the material is visible on.
-	int my_int = 10;
-	my_int = 2;
-	
-	float my_float = 2.5;
-	my_float = 10.3;
-	
-	bool my_bool = true;
-	my_bool = false;
-	
-	vec2 my_vec2 = vec2(6.0, 5.0);
-	vec4 my_vec4 = vec4(1.0, 2.0, my_vec2);
-	vec3 my_vec3 = vec3(1.0); 
-	my_vec4.x = 1.0;
-	my_vec4.y = 2.0;
-	my_vec4.z = 3.0; //my_vec2.x
-	my_vec4.w = 4.0; //my_vec2.y
-	
-	vec3 swizzle_vec = my_vec4.wwx;
-	
+	int got_int = my_function();
+	float sum_floats = add_floats(10.5, 4.5);
+	int resta = substract_ints(5, 3);
 }
 
 void fragment() {
