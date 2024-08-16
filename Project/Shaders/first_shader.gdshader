@@ -1,26 +1,18 @@
 shader_type canvas_item;
 
-int my_function(){
-	return 10;
-}
-
-int substract_ints(int intA, int intB){
-	int result = intA - intB;
-	return result;
-}
-
-float add_floats(float floatA, float floatB){
-	float result = floatA + floatB;
-	return result;
-}
+const float SPEED = 5.0;
+const float AMPLITUDE = 50.0;
 
 void vertex() {
 	// Called for every vertex the material is visible on.
-	int got_int = my_function();
-	float sum_floats = add_floats(10.5, 4.5);
-	int resta = substract_ints(5, 3);
+	
+	if(VERTEX.y < 0.0 && VERTEX.x < 0.0){
+		vec2 circle = vec2(cos(TIME * SPEED) * AMPLITUDE, sin(TIME * SPEED) * AMPLITUDE);
+		VERTEX += vec2(-100.0, -25.0) + circle;
+	}
 }
 
 void fragment() {
 	// Called for every pixel the material is visible on.
+	COLOR += vec4(sin(TIME), cos(TIME),sin(TIME), 1.0);
 }

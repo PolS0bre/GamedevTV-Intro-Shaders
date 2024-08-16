@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbla7uwin26ng"]
+[gd_scene load_steps=5 format=3 uid="uid://dbla7uwin26ng"]
 
 [ext_resource type="Shader" path="res://Shaders/first_shader.gdshader" id="1_842rb"]
+[ext_resource type="Script" path="res://Scripts/shaders_101.gd" id="1_dl02y"]
 [ext_resource type="Texture2D" uid="uid://dxjlnes82hkk4" path="res://icon.svg" id="1_nakq3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_icwsa"]
 shader = ExtResource("1_842rb")
 
 [node name="Shaders101" type="Node2D"]
+script = ExtResource("1_dl02y")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_icwsa")
