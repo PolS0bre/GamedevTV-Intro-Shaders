@@ -6,6 +6,11 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_icwsa"]
 shader = ExtResource("1_842rb")
+shader_parameter/global_float = 3.0
+shader_parameter/global_int = null
+shader_parameter/global_bool = null
+shader_parameter/global_vec3 = null
+shader_parameter/global_color = Color(0.988235, 0.941176, 0.0705882, 1)
 
 [node name="Shaders101" type="Node2D"]
 script = ExtResource("1_dl02y")
